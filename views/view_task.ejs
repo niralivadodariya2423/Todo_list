@@ -1,0 +1,16 @@
+<table>
+    <tr>
+        <th colspan="2">TASK</th>
+    </tr>
+
+    <tr>
+        <th>NAME</th>
+        <th>TASK</th>
+    </tr>
+    <% result.forEach(function(user){%>
+    <tr>
+        <td><%= user.name%></td>
+        <td><%= user.task%></td>
+    </tr>
+    <% }) %>
+</table>

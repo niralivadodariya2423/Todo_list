@@ -1,0 +1,67 @@
+<form method="post" action="/user_register">
+    <table>
+        <tr>
+            <h2>User Registration Form</h2>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input type="email" name="email"></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" name="password"></td>
+        </tr>
+        <tr>
+            <td>Contact No:</td>
+            <td><input type="text" name="contact_no"></td>
+        </tr>
+        <tr>
+            <td>City:</td>
+            <td>
+                <select name="city">
+                    <option disabled>--Select City--</option>
+                    <option selected>Surat</option>
+                    <option>Jamnagar</option>
+                    <option>Ahemdabad</option>
+                    <option>Rajkot</option>
+                    <option>Vadodara</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" name="register"></td>
+        </tr>
+    </table>
+</form>
+
+
+<table border="1">
+    <tr>
+        <th colspan="6" style="text-align: center;">Registered User</th>
+    </tr>
+    <tr>
+        <td>ID</td>
+        <td>NAME</td>
+        <td>EMAIL</td>
+        <td>PASSWORD</td>
+        <td>CONTACT NO</td>
+        <td>CITY</td>
+    </tr>
+
+    <%result.forEach(function(user){%>
+        <tr>
+            <td><%= user.id%></td>
+            <td><%= user.name%></td>
+            <td><%= user.email%></td>
+            <td><%= user.password%></td>
+            <td><%= user.contact_no%></td>
+            <td><%= user.city%></td>
+        </tr>
+        <% }) %>
+
+</table>
